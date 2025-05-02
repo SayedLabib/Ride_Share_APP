@@ -94,6 +94,8 @@ If you're using Node.js version 17 or higher, you might encounter an OpenSSL-rel
 Error: error:0308010C:digital envelope routines::unsupported
 ```
 
+This is because the project uses React Scripts 5.0.1 which may have compatibility issues with newer Node.js versions.
+
 To resolve this, use one of these methods:
 
 **Option 1**: Set Node options before starting the app (Windows Command Prompt):
@@ -106,7 +108,7 @@ set NODE_OPTIONS=--openssl-legacy-provider && npm start
 $env:NODE_OPTIONS="--openssl-legacy-provider"; npm start
 ```
 
-**Option 3**: Downgrade to Node.js 16.x which is fully compatible with React Scripts 3.0.1
+**Option 3**: Downgrade to Node.js 16.x which is fully compatible with React Scripts 5.0.1
 
 ## Application Flow
 
@@ -143,15 +145,17 @@ $env:NODE_OPTIONS="--openssl-legacy-provider"; npm start
 - Reviews and ratings system
 - Map integration for route visualization
 
+## Quick Start Commands
 
-
-## For windows command Prompt
-
+### For Windows Command Prompt
+```
 set NODE_OPTIONS=--openssl-legacy-provider && npm start
+```
 
-## For windows PowerShell
+### For Windows PowerShell
+```
 $env:NODE_OPTIONS="--openssl-legacy-provider"; npm start
-
+```
 
 ## License
 

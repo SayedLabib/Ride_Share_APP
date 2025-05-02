@@ -13,10 +13,47 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>RideShare - Your Ride Sharing Platform</title>
+    <style>
+      .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+      .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+          width: 16px !important;
+          height: 4px !important;
+          border-radius: 5px !important;
+          margin: 0 6px !important;
+      }
+
+      .swiper-pagination {
+          bottom: 2px !important;
+      }
+
+      .swiper-wrapper {
+          height: max-content !important;
+          width: max-content !important;
+          padding-bottom: 64px;
+      }
+
+      .swiper-pagination-bullet-active {
+          background: #4CAF50 !important;
+      }
+      
+      .swiper-slide.swiper-slide-active>.slide_active\:border-primary {
+          --tw-border-opacity: 1;
+          border-color: rgb(76 175 80 / var(--tw-border-opacity));
+      }
+
+      .swiper-slide.swiper-slide-active>.group .slide_active\:text-gray-800 {
+          ---tw-text-opacity: 1;
+          color: rgb(31 41 55 / var(--tw-text-opacity));
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
-</html> 
+</html>

@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Dashboard.css';
+import { toast } from 'react-toastify';
 
 // Mock data - would come from an API in a real app
 const mockUpcomingRides = [
@@ -49,12 +50,37 @@ const mockPastRides = [
   }
 ];
 
-const Dashboard = ({ user }) => {
-  // Mock user data if not provided
-  const userData = user || {
-    name: 'John Doe',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
-  };
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Check for user data in localStorage
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUserData(JSON.parse(storedUser));
+    } else {
+      // Redirect to login if no user data is found
+      toast.error('Please log in to access the dashboard');
+      navigate('/login');
+    }
+    setIsLoading(false);
+  }, [navigate]);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading">
+          <i className="fas fa-spinner fa-spin"></i> Loading dashboard...
+        </div>
+      </div>
+    );
+  }
+
+  if (!userData) {
+    return null; // Will redirect in useEffect
+  }
 
   return (
     <div className="dashboard-container">
@@ -212,4 +238,4 @@ const Dashboard = ({ user }) => {
   );
 };
 
-export default Dashboard; 
+export default Dashboard;

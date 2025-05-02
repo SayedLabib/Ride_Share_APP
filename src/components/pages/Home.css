@@ -35,13 +35,18 @@
   border-radius: 2px;
 }
 
+/* Feature Card Improvements */
 .feature-card {
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  padding: 30px;
+  padding: 30px 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feature-card:hover {
@@ -52,11 +57,29 @@
   font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .feature-card h3 {
   margin-bottom: 15px;
   font-size: 1.4rem;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--dark-color);
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card p {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  font-family: var(--body-font);
 }
 
 /* How It Works Section */
@@ -71,24 +94,30 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .steps-container:before {
   content: '';
   position: absolute;
   top: 35px;
-  left: 60px;
-  right: 60px;
+  left: 0;
+  right: 0;
   height: 3px;
   background-color: var(--primary-color);
+  z-index: 1;
 }
 
+/* How It Works Improvements */
 .step {
   flex: 1;
   text-align: center;
   padding: 0 15px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step-number {
@@ -102,21 +131,246 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .step h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 1.3rem;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--dark-color);
+  width: 100%;
+}
+
+.step p {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  font-family: var(--body-font);
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 @media (max-width: 992px) {
   .steps-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
+    padding: 0 40px;
   }
   
   .steps-container:before {
     display: none;
   }
-} 
+  
+  .step-number:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    height: 40px;
+    width: 3px;
+    background-color: var(--primary-color);
+    display: block;
+  }
+  
+  .step-number:first-child:before {
+    display: none;
+  }
+}
+
+/* Vehicle Types Section */
+.vehicle-types {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vehicle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* Vehicle Card Improvements */
+.vehicle-card {
+  flex: 0 0 calc(25% - 30px);
+  min-width: 250px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-card:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  transition: width 0.4s ease;
+}
+
+.vehicle-card:hover:before {
+  width: 100%;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.vehicle-card h3 {
+  font-size: 1.3rem;
+  margin: 20px 0 10px;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-family: var(--heading-font);
+  text-align: center;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vehicle-card p {
+  padding: 0 20px 20px;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+/* Payment Methods Section */
+.payment-methods {
+  padding: 80px 0;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.payment-logo {
+  height: 50px;
+  width: auto;
+  filter: grayscale(30%);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.payment-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.payment-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Payment Feature Improvements */
+.payment-feature {
+  flex: 0 0 calc(33.33% - 30px);
+  min-width: 280px;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-feature:hover {
+  transform: translateY(-10px);
+}
+
+.payment-feature i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.payment-feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-family: var(--heading-font);
+  text-align: center;
+  width: 100%;
+}
+
+.payment-feature p {
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+@media (max-width: 992px) {
+  .vehicle-card, 
+  .payment-feature {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 576px) {
+  .vehicle-card, 
+  .payment-feature {
+    flex: 0 0 calc(100% - 30px);
+  }
+  
+  .payment-logos {
+    gap: 20px;
+  }
+  
+  .payment-logo {
+    height: 40px;
+  }
+}

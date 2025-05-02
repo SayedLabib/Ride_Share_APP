@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Auth.css';
+import { toast } from 'react-toastify';
 
-const Login = ({ login }) => {
+const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
@@ -42,8 +43,11 @@ const Login = ({ login }) => {
         avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
       };
 
-      // Call the login function passed from App.js
-      login(userData);
+      // Store user data in localStorage for auth persistence
+      localStorage.setItem('user', JSON.stringify(userData));
+      
+      // Show success notification
+      toast.success('Logged in successfully!');
       
       // Redirect to dashboard
       navigate('/dashboard');
@@ -80,7 +84,7 @@ const Login = ({ login }) => {
           
           <div className="form-group">
             <label htmlFor="password" className="form-label">
-              <i className="fas fa-lock"></i> Password
+              <i class="fas fa-lock"></i> Password
             </label>
             <input
               type="password"
@@ -134,4 +138,4 @@ const Login = ({ login }) => {
   );
 };
 
-export default Login; 
+export default Login;

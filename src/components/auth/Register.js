@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Auth.css';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -44,6 +45,9 @@ const Register = () => {
     setTimeout(() => {
       // Mock successful registration
       setIsLoading(false);
+      
+      // Show success notification
+      toast.success('Account created successfully! Please log in.');
       
       // Redirect to login page with success message
       navigate('/login');
@@ -168,4 +172,4 @@ const Register = () => {
   );
 };
 
-export default Register; 
+export default Register;
