@@ -1,0 +1,366 @@
+.book-ride-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.back-link {
+  margin-bottom: 20px;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+.back-link i {
+  margin-right: 8px;
+}
+
+.loading-container,
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.loading i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.not-found {
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+}
+
+.not-found i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.not-found h2 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.not-found p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.ride-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow);
+}
+
+.route-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.route-info h1 i {
+  color: var(--primary-color);
+  margin: 0 15px;
+}
+
+.ride-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #555;
+}
+
+.ride-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.ride-meta i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.price-tag {
+  text-align: center;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.per-seat {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.ride-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+}
+
+.driver-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.driver-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.driver-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.driver-info {
+  margin-top: 5px;
+}
+
+.driver-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verified-badge {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.driver-rating {
+  color: #f39c12;
+  margin-bottom: 5px;
+}
+
+.driver-since {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.vehicle-info {
+  margin-top: 15px;
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  width: 100px;
+  color: #666;
+}
+
+.info-value {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+}
+
+h3 i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.ride-description {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ride-details {
+  margin-bottom: 25px;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.available-seats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.seat-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.seat-icons i {
+  color: var(--primary-color);
+}
+
+.seat-icons i.taken {
+  color: #ddd;
+}
+
+.seats-info {
+  color: #666;
+}
+
+.seats-info span {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.amenities-list,
+.rules-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.amenities-list li,
+.rules-list li {
+  display: flex;
+  align-items: center;
+}
+
+.amenities-list i,
+.rules-list i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.booking-summary {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #555;
+}
+
+.summary-row.total {
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+  padding-top: 15px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+}
+
+.booking-success {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: var(--success-color);
+  margin-bottom: 20px;
+}
+
+.booking-success h2 {
+  border: none;
+  margin-bottom: 15px;
+}
+
+.booking-success p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .ride-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .ride-overview {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .price-tag {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .amenities-list,
+  .rules-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .ride-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .route-info h1 {
+    font-size: 1.5rem;
+  }
+} 
