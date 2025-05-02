@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -415,6 +415,80 @@ const Home = () => {
               </div>
             </div>
             <div className="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="about-us-preview py-16 bg-gray-50">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+              <h2 className="section-title">About GariLaGBE</h2>
+              <p className="mb-6">
+                GariLaGBE is a community-driven ridesharing platform designed to connect drivers with empty seats to passengers 
+                traveling the same way. We're on a mission to make travel more affordable, sociable, and sustainable.
+              </p>
+              <p className="mb-6">
+                Founded in 2022, our platform has already helped thousands of people share rides, reduce carbon emissions, 
+                and build new connections across the country.
+              </p>
+              <Link to="/about" className="btn btn-primary">
+                Learn More About Us
+              </Link>
+            </div>
+            <div className="md:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop" 
+                alt="GariLaGBE Team" 
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Help & Support Section */}
+      <section className="help-support-preview py-16">
+        <div className="container">
+          <h2 className="section-title text-center">Need Help?</h2>
+          <p className="text-center section-subtitle mb-12">
+            We're here to support you every step of the way
+          </p>
+          
+          <div className="grid-3">
+            <div className="help-card">
+              <div className="help-icon">
+                <i className="fas fa-question-circle"></i>
+              </div>
+              <h3>Frequently Asked Questions</h3>
+              <p>Find answers to common questions about our ridesharing service.</p>
+              <Link to="/help" className="help-link">
+                View FAQs <i className="fas fa-arrow-right"></i>
+              </Link>
+            </div>
+            
+            <div className="help-card">
+              <div className="help-icon">
+                <i className="fas fa-book-open"></i>
+              </div>
+              <h3>User Guides</h3>
+              <p>Detailed guides on how to use our platform effectively.</p>
+              <Link to="/help" className="help-link">
+                Read Guides <i className="fas fa-arrow-right"></i>
+              </Link>
+            </div>
+            
+            <div className="help-card">
+              <div className="help-icon">
+                <i className="fas fa-headset"></i>
+              </div>
+              <h3>Contact Support</h3>
+              <p>Get in touch with our friendly support team for personalized assistance.</p>
+              <Link to="/help" className="help-link">
+                Contact Us <i className="fas fa-arrow-right"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

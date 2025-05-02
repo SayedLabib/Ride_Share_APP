@@ -374,3 +374,123 @@
     height: 40px;
   }
 }
+
+/* Add styles for About Us and Help sections */
+
+/* About Us Preview Section */
+.about-us-preview {
+  background-color: #f9fafb;
+}
+
+.about-us-preview .section-title {
+  color: #059669;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-preview p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.about-us-preview .btn-primary {
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.about-us-preview .btn-primary:hover {
+  background-color: #059669;
+}
+
+.about-us-preview img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Help & Support Preview Section */
+.help-support-preview {
+  padding: 4rem 0;
+}
+
+.help-support-preview .section-title {
+  color: #059669;
+  margin-bottom: 0.75rem;
+}
+
+.help-support-preview .section-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.help-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.help-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #ecfdf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.help-icon i {
+  font-size: 1.75rem;
+  color: #10b981;
+}
+
+.help-card h3 {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.help-card p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.help-link {
+  color: #10b981;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.help-link i {
+  margin-left: 0.375rem;
+  transition: transform 0.2s;
+}
+
+.help-link:hover {
+  color: #059669;
+}
+
+.help-link:hover i {
+  transform: translateX(3px);
+}
